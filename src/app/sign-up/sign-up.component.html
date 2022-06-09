@@ -1,0 +1,21 @@
+<div class="sign-up">
+  <div class="sign-up__wrapper">
+    <div class="content">
+      <div class="title">Создать аккаунт</div>
+      <div class="inputs">
+        <zp-icon class="phone-icon" icon="login-phone"></zp-icon>
+        <zp-icon class="password-icon" icon="login-password"></zp-icon>
+        <zp-icon class="email-icon" icon="sign-up-email"></zp-icon>
+        <zp-icon class="name-icon" icon="sign-up-name"></zp-icon>
+        <input brInput [widthSize]="327" [heightSize]="49" placeholder="Название   комп клуба">
+        <input brInput [widthSize]="327" [heightSize]="49" placeholder="Номер телефона">
+        <input brInput [widthSize]="327" [heightSize]="49" placeholder="Адрес эл. почты">
+        <input type="password" brInput [widthSize]="327" [heightSize]="49" placeholder="Пароль">
+      </div>
+      <zp-button [widthSize]="327" [heightSize]="44">Зарегистрироваться</zp-button>
+      <div class="login">Есть аккаунта?
+        <span onclick="location='/login'">Войти</span>
+      </div>
+    </div>
+  </div>
+</div>

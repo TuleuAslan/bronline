@@ -1,0 +1,193 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+  // * Primary
+  --primary: #0384fc;
+  --on-primary: #1961e5;
+  --primary-600: #1c3fb6;
+  --primary-500: #175fd5;
+  --primary-450: #4783f3;
+  --primary-400: #2da2ff;
+  --primary-350: #7da8f7;
+  --primary-300: #8cc9ff;
+  --primary-200: #baddff;
+  --primary-100: #e2f2ff;
+  --primary-pressed: #047eef;
+
+  // * Success
+  --success: #39c427;
+  --on-success: #1ba20a;
+  --success-600: #59b26d;
+  --success-500: #2db41c;
+  --success-450: #1ba20a;
+  --success-400: #7ed772;
+  --success-300: #a5e29c;
+  --success-200: #c9edc3;
+  --success-100: #e8f8e7;
+  --success-hover: #79cd8c;
+  --success-pressed: #2ba946;
+
+  // * Warning
+  --warning: #ffc31d;
+  --on-warning: #ff8000;
+  --warning-300: #fb0;
+  --warning-200: #ffda92;
+  --warning-100: #fffac2;
+
+  // * Danger
+  --danger: #f62d30;
+  --danger-100: #d61d1d;
+  --on-danger: #ff4d4d;
+  --danger-400: #f37172;
+  --danger-300: #f46767;
+  --danger-200: #ffcdd3;
+
+  // * Other
+  --background-600: #f4faff;
+  --background-500: #f6f8fc;
+  --background-400: #e6ebf7;
+  --background-300: #eaf5ff;
+  --highlight: #e6ebf7;
+  --gray-text: #747575;
+  --disabled-text: #f4f4f4;
+
+  // * Black
+  --black-600: #323232;
+  --black-500: #505050;
+  --black-450: #666;
+  --black-400: #848484;
+  --black-300: #c2c2c2;
+  --black-200: #e0e0e0;
+  --black-100: #f5f5f5;
+  --border: #bfbfbf;
+  --bronline-icon: url(./assets/images/bronline.png);
+
+  // * -webkit scrollbar colors
+  --scrollbar-thumb: #d9d8d8;
+  --scrollbar-hover: #737373;
+  --scrollbar-track: #efefef;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+html{
+  background: linear-gradient(#163d79, #33226d);
+  height: 100%;
+}
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+
+  &.no-scroll {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.highlight {
+  background-color: rgb(45 162 255 / 15%);
+}
+
+.whatsapp-dialog-container .mat-dialog-container {
+  padding: 0 !important;
+}
+
+.mat-slide-toggle-thumb {
+  width: 17px !important;
+  height: 17px !important;
+  border: 0.5px solid rgb(0 0 0 / 10%) !important;
+}
+
+.mat-slide-toggle-bar {
+  width: 32px !important;
+  height: 20px !important;
+  background-color: white;
+  border: 1.5px solid rgb(0 0 0 / 10%) !important;
+  border-radius: 15px !important;
+}
+
+.mat-slide-toggle-thumb-container {
+  top: -0.5px !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: var(--primary) !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container {
+  transform: translate3d(12px, 0, 0) !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: white !important;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+  margin-right: 20px;
+  background-color: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 2px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover);
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  padding-right: 20px;
+  background: var(--scrollbar-track);
+  border-radius: 2px;
+}
+input {
+  background-color: black;
+  border: 0.6px solid #FFFFFF;
+  border-radius: 12px;
+  padding-left: 47px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  ::placeholder {
+    color: white;
+    font-weight: 400;
+  }
+}
+textarea {
+  background-color: #096AFC1A;
+  border: 0.6px solid #FFFFFF;
+  border-radius: 12px;
+  padding-left: 47px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  ::placeholder {
+    color: white;
+    font-weight: 400;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

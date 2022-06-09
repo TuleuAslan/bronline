@@ -1,0 +1,73 @@
+<div class="profile">
+  <div class="first-block">
+    <div class="title">Информация об аккаунте</div>
+    <div class="info">
+      <div class="line">
+        <div class="line__title">Логин</div>
+        <input brInput [widthSize]="325" [heightSize]="54">
+      </div>
+      <div class="line">
+        <div class="line__title">Электронная почта</div>
+        <input brInput [widthSize]="325" [heightSize]="54">
+      </div>
+    </div>
+    <div class="line">
+      <div class="line__title">Пароль</div>
+      <input brInput [widthSize]="325" [heightSize]="54">
+    </div>
+  </div>
+  <div class="second-block">
+    <div class="title">Информация о моем клубе</div>
+    <div class="divider">
+      <div class="credentials">
+        <div class="line">
+          <div class="line__title">Название клуба</div>
+          <input brInput [widthSize]="325" [heightSize]="54">
+        </div>
+        <div class="line">
+          <div class="line__title">Город</div>
+          <input brInput [widthSize]="325" [heightSize]="54">
+        </div>
+        <div class="line">
+          <div class="line__title">Адрес клуба</div>
+          <input brInput [widthSize]="325" [heightSize]="54">
+        </div>
+        <div class="price-time">
+          <div class="line">
+            <div class="line__title">Цена за час</div>
+            <input brInput [widthSize]="106" [heightSize]="54">
+          </div>
+          <div class="line">
+            <div class="line__title">Время работы:</div>
+            <div class="inputs">
+              <input brInput [widthSize]="80" [heightSize]="54"> - <input brInput [widthSize]="80" [heightSize]="54">
+            </div>
+          </div>
+        </div>
+        <div class="line">
+          <div class="line__title">Контактный телефон</div>
+          <input brInput [widthSize]="325" [heightSize]="54">
+        </div>
+      </div>
+      <div class="credentials">
+        <div class="line">
+          <div class="line__title">Описание клуба</div>
+          <textarea class="description"></textarea>
+        </div>
+        <div class="line">
+          <div class="line__title"><zp-icon icon="instagram"></zp-icon><span>Ссылка на Instagram</span> </div>
+          <input brInput [widthSize]="325" [heightSize]="54">
+        </div>
+        <div class="line">
+          <div class="line__title"><zp-icon icon="tiktok"></zp-icon><span>Ссылка на TikTok</span></div>
+          <input brInput [widthSize]="325" [heightSize]="54">
+        </div>
+        <div class="line">
+          <div class="line__title"><zp-icon icon="safari"></zp-icon><span>Ссылка на сайт</span> </div>
+          <input brInput [widthSize]="325" [heightSize]="54">
+        </div>
+      </div>
+    </div>
+  </div>
+  <zp-button [widthSize]="327" [heightSize]="44">Сохранить</zp-button>
+</div>

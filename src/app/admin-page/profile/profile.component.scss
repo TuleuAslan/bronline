@@ -1,0 +1,66 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+  color: white;
+  .title {
+    font-size: 26px;
+  }
+  input {
+    background-color: #096AFC1A;
+    padding-left: 20px;
+    font-size: 19px;
+  }
+  textarea {
+    padding-left: 20px;
+    font-size: 19px;
+  }
+  .first-block {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    .info {
+      display: flex;
+      gap: 157px;
+    }
+  }
+  .line {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+  }
+  .price-time {
+    display: flex;
+    gap: 39px;
+    .inputs {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+    }
+  }
+  .second-block {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    .credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+      textarea {
+        height: 135px;
+        width: 449px;
+        padding: 14px 21px;
+        outline: none;
+      }
+    }
+    .divider {
+      display: flex;
+      gap: 157px;
+    }
+  }
+}

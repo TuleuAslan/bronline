@@ -1,0 +1,93 @@
+<div class="club-name">
+  <div class="order-info">
+    <div class="club-name__title">Бронирование мест</div>
+    <div class="filter">
+      <div class="filter__title">
+        Фильтр
+      </div>
+      <div class="selects">
+        <div class="line">
+          <div class="line__title">Укажите дату:</div>
+          <mat-form-field appearance="fill">
+            <mat-select class="select"
+                        disableOptionCentering
+                        [formControl]="timeControl"
+                        panelClass="mySelectPanelClass"
+                        (selectionChange)="timeSelectValue($event)"
+                        [disableRipple]="true"
+                        placeholder="00:00">
+              <mat-option *ngFor="let time of timeVariations" [value]="time.value">
+                {{time.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="line">
+          <div class="line__title">Выберите время:</div>
+          <mat-form-field appearance="fill">
+            <mat-select
+                        class="select"
+                        disableOptionCentering
+                        [formControl]="durationControl"
+                        panelClass="mySelectPanelClass"
+                        (selectionChange)="durationSelectValue($event)"
+                        [disableRipple]="true"
+                        placeholder="1 час">
+              <mat-option *ngFor="let duration of durations" [value]="duration.value">
+                {{duration.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="line">
+          <div class="line__title">Длительность:</div>
+          <input brInput [widthSize]="108" [heightSize]="41">
+        </div>
+      </div>
+    </div>
+    <div class="statuses">
+      <div class="status">
+        <div class="rectangle opacity"></div>
+        <span>Стандарт</span>
+      </div>
+      <div class="status">
+        <div class="rectangle"></div>
+        <span>VIP</span>
+      </div>
+      <div class="status">
+        <div class="elipse"></div>
+        <zp-icon icon="laptop"></zp-icon>
+        <span>Свободно</span>
+      </div>
+      <div class="status">
+        <div class="elipse opacity"></div>
+        <zp-icon icon="laptop"></zp-icon>
+        <span>Занято</span>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card__title">Забронировать места:</div>
+    <div class="card__info">
+      <div class="data">
+        <span class="name">Места:</span>
+        <span class="value">6,7</span>
+      </div>
+      <div class="data">
+        <span class="name">Дата и время:</span>
+        <span class="value">03.04.22; 22:00</span>
+      </div>
+      <div class="data">
+        <span class="name">Длительность:</span>
+        <span class="value">1 час</span>
+      </div>
+    </div>
+    <div class="result">
+      <div class="data">
+        <span class="name">Итого:</span>
+        <span class="value">1 200 ₸</span>
+      </div>
+    </div>
+    <zp-button [widthSize]="327" [heightSize]="44">Оформить бронь</zp-button>
+  </div>
+</div>

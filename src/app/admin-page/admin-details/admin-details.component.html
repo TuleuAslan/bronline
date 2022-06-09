@@ -1,0 +1,18 @@
+<div class="page">
+  <div class="page__header">
+    <span class="page__header__title"></span>
+    <nav mat-tab-nav-bar>
+      <a
+        mat-tab-link
+        routerLinkActive="navbar__link_active"
+        *ngFor="let item of adminMenu;"
+        [routerLink]="item.routerLink"
+      >{{item.title}}</a
+      >
+    </nav>
+    <zp-button icon="go-back" btnType="secondary" [widthSize]="144" [heightSize]="46">Выйти</zp-button>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+
+

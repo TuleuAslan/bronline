@@ -1,0 +1,11 @@
+<button
+  class="btn"
+  [ngClass]="btnType"
+  (click)="buttonClicked.emit()"
+  [disabled]="isDisabled"
+  [style.height.px]="heightSize"
+  [style.width.px]="widthSize"
+>
+  <zp-icon *ngIf="icon" class="btn__icon" [icon]="icon"></zp-icon>
+  <ng-content></ng-content>
+</button>

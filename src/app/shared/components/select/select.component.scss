@@ -1,0 +1,203 @@
+$primary-blue: #276ef1;
+
+:root {
+  height: 100%;
+}
+
+.select-header {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.mat-form-field {
+  height: 40px;
+}
+
+.select--small {
+  .select-header {
+    margin-bottom: 0.25rem;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .mat-form-field {
+    height: 32px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+::ng-deep .mat-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+::ng-deep .mat-select-value {
+  max-width: initial;
+}
+
+::ng-deep .mySelectPanelClass.mat-select-panel {
+  margin-left: -5px;
+  border: 1px solid var(--primary-350);
+  border-radius: 4px;
+  box-shadow: 0 1px 15px rgb(182 182 182 / 12%), 1px 1px 5px rgb(120 120 120 / 7%);
+  transform: translateX(0) translateY(31px) !important;
+
+  .mat-option {
+    padding: 0 8px;
+  }
+
+  &::-webkit-scrollbar {
+    display: block;
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 0.5rem;
+    background: var(--scrollbar-track);
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-track-piece:start {
+    margin-top: 0.5rem;
+    background: var(--scrollbar-track);
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+
+::ng-deep .mat-select-panel .mat-option {
+  height: 36px !important;
+  padding: 0 8px;
+  background-color: initial;
+  border-bottom: 1px solid var(--black-200);
+
+  &.mat-active {
+    background-color: rgb(0 0 0 / 4%);
+  }
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled):hover {
+  background-color: #eee;
+}
+
+::ng-deep .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background-color: initial;
+}
+
+::ng-deep .mat-pseudo-checkbox {
+  display: none !important;
+}
+
+::ng-deep .myPanelClass.mat-select-panel {
+  min-width: calc(100% + 32px) !important;
+}
+
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: $primary-blue;
+}
+
+.select-wrapper ::ng-deep .mat-primary .mat-option-multiple.mat-selected:not(.mat-option-disabled)::after {
+  position: absolute;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background-image: var(--check-mark-icon);
+  content: '';
+}
+
+::ng-deep .mat-option.mat-active {
+  background-color: white;
+}
+
+::ng-deep .mat-option-text {
+  font-size: 14px;
+}
+
+::ng-deep .mat-select-value-text {
+  font-size: 14px;
+}
+
+.select-wrapper {
+  ::ng-deep .mat-form-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    background-color: white;
+    border-radius: 4px;
+
+    &-wrapper {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+
+    &-appearance-fill .mat-form-field-wrapper .mat-form-field-flex {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 10px 0 20px;
+      background-color: white;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    &-underline {
+      display: none;
+    }
+
+    &-appearance-fill .mat-form-field-infix {
+      padding: 0;
+      border: none;
+    }
+
+    &-appearance-fill .mat-select-arrow-wrapper {
+      transform: translateY(0);
+    }
+
+    &-appearance-fill .mat-form-field-flex {
+      padding: 0;
+      background-color: white !important;
+    }
+
+    &-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+      background-color: transparent !important;
+    }
+  }
+}
+
+.select--error {
+  .select-header {
+    color: var(--danger);
+  }
+
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-wrapper .mat-form-field-flex {
+    border: 1px solid var(--danger);
+  }
+}
+
+.select--outline-disabled ::ng-deep .mat-form-field-appearance-fill .mat-form-field-wrapper .mat-form-field-flex {
+  padding: 0;
+  border: none;
+}

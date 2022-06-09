@@ -1,0 +1,48 @@
+.page {
+  padding: 58px 132px;
+  background: linear-gradient(#163d79, #33226d);
+  height: fit-content;
+  min-height: 100%;
+  &__header {
+    // color: white;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+      background-image: var(--bronline-icon);
+      width: 218px;
+      height: 34px;
+    }
+    ::ng-deep .btn-secondary {
+      border-radius: 47px;
+      color: white;
+      font-size: 16px;
+      background-color: #096AFC1A;
+    }
+  }
+}
+nav {
+  ::ng-deep .mat-tab-links {
+    max-width: 1180px;
+    margin: 0 auto;
+    gap: 100px;
+  }
+
+  .mat-tab-link {
+    min-width: 80px;
+    max-width: 209px;
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 18px;
+    white-space: normal;
+    padding: 0 32px;
+  }
+
+  .navbar__link_active {
+    color: white;
+    border-bottom: 3px solid white;
+    font-weight: 600;
+    opacity: 1;
+  }
+}

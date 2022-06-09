@@ -1,0 +1,43 @@
+<div class="verification">
+  <div class="verification__title">
+    Введите номер билета
+  </div>
+  <div class="actions">
+    <div class="line">
+      <span class="line__title">Номер билета</span>
+      <div class="merge">
+        <input brInput [widthSize]="323" [heightSize]="41">
+        <zp-button [widthSize]="155" [heightSize]="44">Проверить</zp-button>
+      </div>
+    </div>
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+    <ng-container matColumnDef="No">
+      <th mat-header-cell *matHeaderCellDef>Номер заказа:</th>
+      <td mat-cell *matCellDef="let element"> {{element.No}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Имя Фамилия:</th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="place">
+      <th mat-header-cell *matHeaderCellDef> Места: </th>
+      <td mat-cell *matCellDef="let element"> {{element.place}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="time">
+      <th mat-header-cell *matHeaderCellDef> Дата и время: </th>
+      <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="duration">
+      <th mat-header-cell *matHeaderCellDef> Длительность: </th>
+      <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

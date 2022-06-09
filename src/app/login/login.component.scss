@@ -1,0 +1,70 @@
+.login {
+  font-family: 'Montserrat';
+  &__wrapper {
+    width: 437px;
+    height: 692px;
+    margin: 100px auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: black;
+    border-radius: 47px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      margin-top: 87px;
+      .title {
+        color: white;
+        font-size: 28px;
+        font-weight: 700;
+      }
+      .forgot-password {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: -0.234766px;
+        align-self: end;
+        color: #FFFFFF;
+        margin-top: 16px;
+        opacity: 0.5;
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 63px;
+        position: relative;
+        .phone-icon {
+          position: absolute;
+          top: 13px;
+          left: 13px;
+        }
+        .password-icon {
+          position: absolute;
+          top: 71px;
+          left: 13px;
+        }
+      }
+      zp-button {
+        margin-top: 35px;
+      }
+      .sign-up {
+        font-size: 11.73px;
+        font-weight: 500;
+        letter-spacing: -0.234766px;
+        color: #FFFFFF;
+        margin-top: 198px;
+        span {
+          color: #438DFF;
+          margin-left: 3px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="login">
+  <div class="login__wrapper">
+    <div class="content">
+      <div class="title">Войти в аккаунт</div>
+      <div class="inputs">
+        <zp-icon class="phone-icon" icon="login-phone"></zp-icon>
+        <zp-icon class="password-icon" icon="login-password"></zp-icon>
+        <input brInput [widthSize]="327" [heightSize]="49" placeholder="Номер телефона">
+        <input type="password" brInput [widthSize]="327" [heightSize]="49" placeholder="Пароль">
+      </div>
+      <span class="forgot-password">Забыли пароль?</span>
+      <zp-button [widthSize]="327" [heightSize]="44">Войти</zp-button>
+      <div class="sign-up">Нет аккаунта?
+        <span onclick="location='/sign-up'">Зарегистрироваться</span>
+      </div>
+    </div>
+  </div>
+</div>

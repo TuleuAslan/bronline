@@ -1,0 +1,28 @@
+<div
+  class="select-wrapper select--{{size}}"
+  [class.select--outline-disabled]="!showBorder"
+  [class.select--error]="hasError"
+>
+  <h4 *ngIf="title" class="select-header">{{ title }}</h4>
+
+  <mat-form-field appearance="fill" [style.width.px]="widthSize">
+    <mat-select
+      class="select"
+      disableOptionCentering
+      [formControl]="itemControl"
+      panelClass="mySelectPanelClass"
+      (selectionChange)="selectValue($event)"
+      [disableRipple]="true"
+      [placeholder]="placeholder || title"
+      [disabled]="disabled"
+    >
+      <mat-option
+        *ngFor="let state of states"
+        [value]="state.value"
+        (click)="throwToastr(true)"
+        [disabled]="state.disabled"
+      >{{ state.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

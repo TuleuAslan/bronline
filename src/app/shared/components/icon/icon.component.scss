@@ -1,0 +1,20 @@
+:host {
+  --size: 1.5rem;
+
+  display: inline-flex;
+  width: var(--size);
+  height: var(--height, var(--size));
+  fill: var(-black-300);
+
+  // pointer-events: none; //to remove tooltip on hover with title text
+
+  /* stylelint-disable */
+  svg {
+    display: inline-block;
+    width: 100%;
+    // fill-rule: current;
+    all: inherit;
+    pointer-events: none; //to remove tooltip on hover with title text
+    position: unset;
+  }
+}
