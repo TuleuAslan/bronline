@@ -9,10 +9,6 @@ export interface ClientList {
 
 const ELEMENT_DATA: ClientList[] = [
   {No: '№18837657', name: 'Абысов Абулхаир', place: [1,3], time: '03.04.22; 22:00', duration:'3 часа'},
-  {No: '№18837657', name: 'Абысов Абулхаир', place: [1,3], time: '03.04.22; 22:00', duration:'3 часа'},
-  {No: '№18837657', name: 'Абысов Абулхаир', place: [1,3], time: '03.04.22; 22:00', duration:'3 часа'},
-  {No: '№18837657', name: 'Абысов Абулхаир', place: [1,3], time: '03.04.22; 22:00', duration:'3 часа'},
-  {No: '№18837657', name: 'Абысов Абулхаир', place: [1,3], time: '03.04.22; 22:00', duration:'3 часа'},
 ];
 @Component({
   selector: 'app-order-verification',

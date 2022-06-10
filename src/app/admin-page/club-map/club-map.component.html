@@ -1,5 +1,5 @@
 <div class="club-name">
-  <div class="order-info">
+  <div class="order-info" [formGroup]="clubInfo">
     <div class="club-name__title">Бронирование мест</div>
     <div class="filter">
       <div class="filter__title">
@@ -8,6 +8,10 @@
       <div class="selects">
         <div class="line">
           <div class="line__title">Укажите дату:</div>
+          <input brInput [widthSize]="108" [heightSize]="41" placeholder="ДД/ММ/ГГ" formControlName="dateValue">
+        </div>
+        <div class="line">
+          <div class="line__title">Выберите время:</div>
           <mat-form-field appearance="fill">
             <mat-select class="select"
                         disableOptionCentering
@@ -23,7 +27,7 @@
           </mat-form-field>
         </div>
         <div class="line">
-          <div class="line__title">Выберите время:</div>
+          <div class="line__title">Длительность:</div>
           <mat-form-field appearance="fill">
             <mat-select
                         class="select"
@@ -38,10 +42,6 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
-        </div>
-        <div class="line">
-          <div class="line__title">Длительность:</div>
-          <input brInput [widthSize]="108" [heightSize]="41">
         </div>
       </div>
     </div>
@@ -65,29 +65,70 @@
         <span>Занято</span>
       </div>
     </div>
+    <div class="select-room">
+      <div class="line">
+      <div class="line__title">Выберите комнату:</div>
+        <mat-form-field appearance="fill">
+          <mat-select
+                      class="select"
+                      disableOptionCentering
+                      panelClass="mySelectPanelClass"
+                      (selectionChange)="roomPicked($event)"
+                      [disableRipple]="true"
+                      [value]="2"
+                      >
+                      <!-- 
+                      [(value)]="roomSelected"
+                       -->
+            <mat-option *ngFor="let room of rooms" [value]="room.value">
+              {{room.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="rooms" *ngFor="let room of clubComputers">
+        <div class="computers" *ngIf="clubComputers.indexOf(room) === roomSelected">
+          <div class="computer" *ngFor="let computer of room; let i = index">
+            <div [ngClass]="computer.disabled === true ?'status disabled': 'status'" (click)="bookComputer(computer, i)">
+              <div class="elipse"></div>
+              <zp-icon icon="laptop"></zp-icon>
+              <div class="hr"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="card">
     <div class="card__title">Забронировать места:</div>
     <div class="card__info">
       <div class="data">
         <span class="name">Места:</span>
-        <span class="value">6,7</span>
+        <div class="booked">
+          <div *ngFor="let computer of bookedComputers; let i = index">
+            <span class="value">{{bookedComputers[i]}},</span>
+          </div>
+        </div>
+     
+        <span class="value" *ngIf="!bookedComputers.length">Не выбрано</span>
       </div>
       <div class="data">
         <span class="name">Дата и время:</span>
-        <span class="value">03.04.22; 22:00</span>
+        <span class="value" *ngIf="timeControl.value">{{clubInfo.controls['dateValue'].value}};{{timeControl.value}}</span>
+        <span class="value" *ngIf="!timeControl.value">Не выбрано</span>
       </div>
       <div class="data">
         <span class="name">Длительность:</span>
-        <span class="value">1 час</span>
+        <span class="value" *ngIf="durationControl.value">{{durationControl.value}} часа</span>
+        <span class="value" *ngIf="!durationControl.value">Не выбрано</span>
       </div>
     </div>
     <div class="result">
       <div class="data">
         <span class="name">Итого:</span>
-        <span class="value">1 200 ₸</span>
+        <span class="value" *ngIf="bookedComputers.length && durationControl.value">{{bookedComputers.length * durationControl.value * 500}}</span>
       </div>
     </div>
-    <zp-button [widthSize]="327" [heightSize]="44">Оформить бронь</zp-button>
+    <zp-button [widthSize]="327" [heightSize]="44" (buttonClicked)="book()">Оформить бронь</zp-button>
   </div>
 </div>

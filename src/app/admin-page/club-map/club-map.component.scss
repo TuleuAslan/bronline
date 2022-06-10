@@ -1,11 +1,14 @@
 .club-name {
   display: flex;
   gap: 310px;
-
+  color: white;
   .order-info {
     display: flex;
     flex-direction: column;
     gap: 78px;
+  }
+  mat-form-field {
+    width: 114px;
   }
   input {
     background-color: #096AFC1A;
@@ -16,6 +19,8 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
+    font-weight: 400;
+    font-size: 12.7679px;
     &__title {
       display: flex;
       align-items: center;
@@ -35,9 +40,6 @@
       margin-bottom: 24px;
     }
     .selects {
-      font-weight: 400;
-      font-size: 10.7679px;
-      color: white;
       display: flex;
       gap: 21px;
     }
@@ -84,6 +86,52 @@
       opacity: 0.4;
     }
   }
+  .select-room {
+    mat-form-field {
+      width: 190px;
+    }
+  }
+  .rooms {
+    .computers {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .status {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      position: relative;
+      margin-bottom: 10px;
+      zp-icon {
+        position: absolute;
+        left: 3px;
+      }
+      .hr {
+        position: absolute;
+        width: 28.68px;
+        height: 3.95px;
+        top: 36px;
+        left: 1px;
+        border-radius: 134.041px;
+        background-color: #632CFF;
+      }
+    }
+    .disabled {
+      .elipse {
+        opacity: 0.4;
+      }
+      .hr {
+        opacity: 0.4;
+      }
+    }
+    .elipse {
+      height: 30px;
+      width: 30px;
+      border-radius:50px;
+      background-color:#096AFB ;
+    }
+  }
   .card {
     width: 424px;
     height: 542px;
@@ -101,6 +149,10 @@
     .data {
       display: flex;
       flex-direction: column;
+      .booked {
+        display: flex;
+        gap: 5px;
+      }
       .name {
         font-weight: 400;
         font-size: 12.7009px;
@@ -130,6 +182,27 @@
     }
   }
 }
-.mat-select-panel {
-  background-color: red;
+
+::ng-deep .mat-form-field-flex {
+  border-radius: 14.36px !important;
+  background-color: #096AFC1A !important;
+  font-size: 14.36px !important;
+  padding: 0px 10px 2px 8px !important;
+}
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+::ng-deep .mat-select-value {    
+  color: white !important;  
+}
+
+::ng-deep .mat-form-field-infix {
+  padding: 0px 3px 11px 9px !important;
+}
+::ng-deep .mat-select-arrow-wrapper {
+  transform: translateY(8%) !important;
+}
+::ng-deep .mat-select-placeholder {
+  color: white;
+  opacity: 0.4;
 }

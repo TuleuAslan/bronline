@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminPageModule } from './admin-page/admin-page.module';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AdminPageModule } from './admin-page/admin-page.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    AdminPageModule
+    AdminPageModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
