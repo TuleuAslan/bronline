@@ -9,6 +9,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminPageModule } from './admin-page/admin-page.module';
 import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptorService } from './interceptors/auth.interceptor';
 
 
 @NgModule({
@@ -18,6 +22,9 @@ import { ToastrModule } from 'ngx-toastr';
     SignUpComponent
   ],
   imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -25,7 +32,13 @@ import { ToastrModule } from 'ngx-toastr';
     AdminPageModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

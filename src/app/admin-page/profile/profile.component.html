@@ -1,4 +1,4 @@
-<div class="profile">
+<div class="profile" [formGroup]="profileForm">
   <div class="first-block">
     <div class="title">Информация об аккаунте</div>
     <div class="info">
@@ -7,8 +7,8 @@
         <input brInput [widthSize]="325" [heightSize]="54" value="griwaok">
       </div>
       <div class="line">
-        <div class="line__title">Электронная почта</div>
-        <input  brInput [widthSize]="325" [heightSize]="54" value="griwok@gmail.com">
+        <div class="line__title" >Электронная почта</div>
+        <input formControlName="email" brInput [widthSize]="325" [heightSize]="54" value="griwok@gmail.com">
       </div>
     </div>
     <div class="line">
@@ -46,7 +46,7 @@
         </div>
         <div class="line">
           <div class="line__title">Контактный телефон</div>
-          <input brInput [widthSize]="325" [heightSize]="54" value="+7 776 554 32 34">
+          <input brInput formControlName="phone" [widthSize]="325" [heightSize]="54" value="+7 776 554 32 34">
         </div>
       </div>
       <div class="credentials">
